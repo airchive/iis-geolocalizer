@@ -1,31 +1,20 @@
-#!/bin/python3
-
 import json
 import turtle
 import urllib.request
 
-url = "http://api.open-notify.org/astros.json";
-urlB = "http://api.open-notify.org/iss-now.json";
+iss = "http://api.open-notify.org/iss-now.json"
+astros = "http://api.open-notify.org/astros.json"
 
-response = urllib.request.urlopen(url);
-result = json.loads(response.read());
+iss_response = urllib.request.urlopen(iss)
+iss_result = json.loads(iss_response.read())
+astros_response = urllib.request.urlopen(astros)
+astros_result = json.loads(astros_response.read())
 
-responseB = urllib.request.urlopen(urlB);
-resultB = json.loads(responseB.read());
+people = astros_result['people']
+location = iss_result['iss_posit ion']
 
-print('People in space: ', result['number'], '\n');
-
-people = result['people'];
-
-for i in people:
-  print(i['name'], "in", i['craft']);
-
-location = resultB['iss_position'];
-latitude = location['latitude'];
-longitude = location['longitude'];
-
-print('\nLatitude: ', latitude);
-print('Longitude: ', longitude);
+latitude = location['latitude']
+longitude = location['longitude']
 
 screen = turtle.Screen()
 screen.setup(720, 360)
