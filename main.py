@@ -30,7 +30,7 @@ print('Longitude: ', longitude);
 screen = turtle.Screen()
 screen.setup(720, 360)
 screen.setworldcoordinates(-180, -90, 180, 90)
-screen.bgpic('map.gif')
+screen.bgpic('assets/gifs/map.gif')
 
 iss = turtle.Turtle()
 iss.penup()
