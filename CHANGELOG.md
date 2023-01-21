@@ -11,4 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * feat: add iss geolocalizer.
 
 ### Full Changelog 
-https://github.com/Airscripts/emdees/commits/1.0.0
+https://github.com/airchive/iss-geolocalizer/commits/1.0.0
